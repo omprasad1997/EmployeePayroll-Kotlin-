@@ -23,8 +23,8 @@ fun main(){
         empDailyWageArr.add(calcDailyWage(empHrs))
     }
 
-    println("Total Emp Wage: " + empDailyWageArr.sum())
-    println("Total Emp Wage with reduce function: " + empDailyWageArr.reduce { acc, value -> value + acc})
+    println("Total Emp Wage:  ${empDailyWageArr.sum()}")
+    println("Total Emp Wage with reduce function:  ${empDailyWageArr.reduce { acc, value -> value + acc}}")
     println("Employee With daily Wage ")
     var dailyCntr = 0
      empDailyWageArr.map {
@@ -42,7 +42,7 @@ fun main(){
 
 fun noOfDaysCalculate(empDailyWageArr: MutableList<Int>): Int {
     var days = 0;
-    for(employeeWage in empDailyWageArr){
+    for(employeeWage in empDailyWageArr) {
         if(employeeWage>0)
             days++
     }
@@ -60,7 +60,3 @@ fun getWorkingHours(empCheck: Int): Int {
         else -> 0
     }
 }
-
-
-
-
